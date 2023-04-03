@@ -51,7 +51,7 @@ theme_volcano <- function() {
     # Blank background
     # This sets the panel background as blank, removing the standard grey ggplot background colour from the plot
     plot.background = ggplot2::element_rect(fill = "grey98", color = "grey98"),                 # Sets the background color and border of the plot
-    panel.background = ggplot2::element_rect(fill = "grey98", color = "grey98")                  # sets the background color of the panel
+    panel.background = ggplot2::element_rect(fill = "grey98", color = "grey98")               # sets the background color of the panel
   )
 }
 

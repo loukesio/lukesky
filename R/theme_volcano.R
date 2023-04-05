@@ -5,54 +5,35 @@
 #' @import ggplot2
 #' @import grid
 #'
+
 theme_volcano <- function() {
   font <- "Roboto"
 
+  ggplot2::theme_bw() +
   ggplot2::theme(
+  #axis.title = element_blank(),      # Remove axis title
+  axis.text.x = ggplot2::element_text(size = 12, color = "grey30"),              # Set size and color of x-axis text
+  axis.text.y = ggplot2::element_text(size = 12, color = "grey30"),              # Set size and color of y-axis text
+  axis.ticks = ggplot2::element_line(color = "grey91", linewidth= .5),           # Set color and width of axis ticks
+  axis.ticks.length.x = grid::unit(.5, "lines"),                              # Set length of x-axis ticks
+  axis.ticks.length.y = grid::unit(.7, "lines"),                              # Set length of y-axis ticks
 
-    # Text format:
-    # This sets the font, size, type and colour of text for the chart's title
-    plot.title = ggplot2::element_text(
-      color = "grey10",
-      size = 20,
-      face = "bold",
-      margin = margin(t = 25,b=10), hjust=0.5
-    ),
+  panel.grid.major = ggplot2::element_line(color=NA),                            # Remove major panel grid line
+  plot.margin = ggplot2::margin(20, 40, 20, 40),                                 # Set margins for the plot
+  plot.background = ggplot2::element_rect(fill = "grey98", color = "grey98"),    # Set background color and border of the plot
+  panel.background = ggplot2::element_rect(fill = "grey98", color = "grey98"),   # Set background color and border of the plot panel
 
-    plot.subtitle = ggtext::element_markdown(
-      color = "grey30",
-      size = 12,
-      lineheight = 1.35, hjust=0.5
-    ),
-    plot.caption = ggplot2::element_text(
-      color = "grey30",
-      size = 10,                           # Sets the font size, color, line height, horizontal justification, and margin of the plot caption
-      lineheight = 1.2, hjust = 0,
-      margin = margin(t = 80)
-    ),
+  legend.key= ggplot2::element_rect(fill = "grey98", colour = "grey98"),         # Set background color and border of the legend key
+  legend.background= ggplot2::element_rect(fill = "grey98", colour = "grey98"),  # Set background color and border of the legend
 
-    legend.text=ggplot2::element_text(size=15),                                                 # Sets the font size of legend text
-    legend.title=ggplot2::element_text(size=18, hjust = 0.5),
-    legend.key=ggplot2::element_rect(fill = "grey98", colour = "grey98"),                      # Sets the background color and border of the legend keys
-    legend.background= element_rect(fill = "grey98", colour = "grey98"),               # Sets the background color and border of the legend
-
-    # Axis format
-    axis.text.x = ggplot2::element_text(size = 15, color = "grey30", margin=margin(t=5,b=10)),  # Sets the font size, color, and margin for x-axis labels
-    axis.text.y = ggplot2::element_text(size = 15, color = "grey30", margin=margin(t=0, r = 5, b = 0, l = 10)), # Sets the font size, color, and margin for y-axis labels
-    axis.ticks = ggplot2::element_line(color = "grey91", linewidth = .5),                            # Sets the color and size of axis ticks
-    axis.ticks.length.x = grid::unit(.5, "lines"),                                           # Sets the length of x-axis ticks
-    axis.ticks.length.y = grid::unit(.7, "lines"),                                           # Sets the length of y-axis ticks
-    axis.title= ggplot2::element_text(size=18),
-
-    # Grid lines
-    # This removes all minor gridlines and adds major y gridlines. In many cases you will want to change this to remove y gridlines and add x gridlines. The cookbook shows you examples for doing so
-    panel.grid.major = ggplot2::element_line(color=NA),                                         # Removes major grid lines from plot
-
-    # Blank background
-    # This sets the panel background as blank, removing the standard grey ggplot background colour from the plot
-    plot.background = ggplot2::element_rect(fill = "grey98", color = "grey98"),                 # Sets the background color and border of the plot
-    panel.background = ggplot2::element_rect(fill = "grey98", color = "grey98")               # sets the background color of the panel
-  )
-}
+  plot.title = ggplot2::element_text(color = "grey10", size = 18, face = "bold", # Set color, size, face and position of the plot title
+                            margin = margin(t = 25), hjust=0.5),
+  plot.subtitle = ggtext::element_markdown(color = "grey30", size = 12,         # Set color, size, lineheight, and position of the plot subtitle
+                                   lineheight = 1.35, hjust=0.5),
+  plot.caption = ggplot2::element_text(color = "grey30", size = 10,              # Set color, size, lineheight, and position of the plot caption
+                              lineheight = 1.2, hjust = 0,
+                              margin = margin(t = 80))
+)
+    }
 
 

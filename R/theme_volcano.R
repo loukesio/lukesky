@@ -11,12 +11,12 @@ theme_volcano <- function() {
 
   ggplot2::theme_bw() +
   ggplot2::theme(
-  #axis.title = element_blank(),      # Remove axis title
-    axis.text.x = ggplot2::element_text(margin = margin(t = 2.5, r =0, b = 0, l = 0)),
-    axis.text.y = ggplot2::element_text(margin = margin(t = 0, r =2.5, b = 0, l = 0)),
-    axis.ticks.length.y = grid::unit(0.25, "cm"),
-  axis.ticks = ggplot2::element_line(color = "grey91", linewidth= .5),           # Set color and width of axis ticks
-  axis.ticks.length.x = grid::unit(.25, "lines"),                              # Set length of x-axis ticks
+  text=ggplot2::element_text(size = 14),
+  axis.text.x = ggplot2::element_text(margin = margin(t = 2.5, r =0, b = 0, l = 0)),
+  axis.text.y = ggplot2::element_text(margin = margin(t = 0, r =2.5, b = 0, l = 0)),
+  axis.ticks.length.y = grid::unit(0.25, "cm"),
+  axis.ticks = ggplot2::element_line(color = "#333333", linewidth= .5),           # Set color and width of axis ticks
+  axis.ticks.length.x = grid::unit(0.25, "cm"),                              # Set length of x-axis ticks
 
   panel.grid.major = ggplot2::element_line(color=NA),                            # Remove major panel grid line
   plot.margin = ggplot2::margin(20, 40, 20, 40),                                 # Set margins for the plot

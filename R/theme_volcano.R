@@ -11,7 +11,7 @@ theme_volcano <- function() {
 
   ggplot2::theme_bw() +
   ggplot2::theme(
-  text=ggplot2::element_text(size = 14),
+  text=ggplot2::element_text(size = 16),
   axis.text.x = ggplot2::element_text(margin = margin(t = 2.5, r =0, b = 0, l = 0)),
   axis.text.y = ggplot2::element_text(margin = margin(t = 0, r =2.5, b = 0, l = 0)),
   axis.ticks.length.y = grid::unit(0.25, "cm"),

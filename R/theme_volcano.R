@@ -12,11 +12,11 @@ theme_volcano <- function() {
   ggplot2::theme_bw() +
   ggplot2::theme(
   #axis.title = element_blank(),      # Remove axis title
-  axis.text.x = ggplot2::element_text(size = 12, color = "grey30"),              # Set size and color of x-axis text
-  axis.text.y = ggplot2::element_text(size = 12, color = "grey30"),              # Set size and color of y-axis text
+    axis.text.x = ggplot2::element_text(margin = margin(t = 2.5, r =0, b = 0, l = 0)),
+    axis.text.y = ggplot2::element_text(margin = margin(t = 0, r =2.5, b = 0, l = 0)),
+    axis.ticks.length.y = grid::unit(0.25, "cm"),
   axis.ticks = ggplot2::element_line(color = "grey91", linewidth= .5),           # Set color and width of axis ticks
-  axis.ticks.length.x = grid::unit(.5, "lines"),                              # Set length of x-axis ticks
-  axis.ticks.length.y = grid::unit(.7, "lines"),                              # Set length of y-axis ticks
+  axis.ticks.length.x = grid::unit(.25, "lines"),                              # Set length of x-axis ticks
 
   panel.grid.major = ggplot2::element_line(color=NA),                            # Remove major panel grid line
   plot.margin = ggplot2::margin(20, 40, 20, 40),                                 # Set margins for the plot
@@ -25,9 +25,11 @@ theme_volcano <- function() {
 
   legend.key= ggplot2::element_rect(fill = "grey98", colour = "grey98"),         # Set background color and border of the legend key
   legend.background= ggplot2::element_rect(fill = "grey98", colour = "grey98"),  # Set background color and border of the legend
+  legend.title = ggplot2::element_text(hjust=0.5, size=12),
+  legend.text = ggplot2::element_text(size=10),
 
-  plot.title = ggplot2::element_text(color = "grey10", size = 18, face = "bold", # Set color, size, face and position of the plot title
-                            margin = margin(t = 25), hjust=0.5),
+  plot.title = ggtext::element_markdown(color = "grey10", size = 18, face = "bold", # Set color, size, face and position of the plot title
+                                         margin = margin(0,0,0.5,0, unit = "cm"), hjust=0.5),
   plot.subtitle = ggtext::element_markdown(color = "grey30", size = 12,         # Set color, size, lineheight, and position of the plot subtitle
                                    lineheight = 1.35, hjust=0.5),
   plot.caption = ggplot2::element_text(color = "grey30", size = 10,              # Set color, size, lineheight, and position of the plot caption

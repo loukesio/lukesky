@@ -13,5 +13,5 @@ sd_error(x)
 a numeric value
 }
 \description{
-standard error function
+A function that allows you to put a vector of numric values and then calculates standard error based on sd and sqrt
 }

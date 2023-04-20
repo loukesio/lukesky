@@ -31,10 +31,7 @@ theme_volcano <- function() {
   plot.title = ggtext::element_markdown(color = "grey10", size = 18, face = "bold", # Set color, size, face and position of the plot title
                                          margin = margin(0,0,0.5,0, unit = "cm"), hjust=0.5),
   plot.subtitle = ggtext::element_markdown(color = "grey30", size = 12,         # Set color, size, lineheight, and position of the plot subtitle
-                                   lineheight = 1.35, hjust=0.5),
-  plot.caption = ggplot2::element_text(color = "grey30", size = 10,              # Set color, size, lineheight, and position of the plot caption
-                              lineheight = 1.2, hjust = 0,
-                              margin = margin(t = 80))
+                                   lineheight = 1.35, hjust=0.5)
 )
     }
 

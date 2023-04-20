@@ -18,7 +18,7 @@ theme_volcano <- function() {
   axis.text.x = ggplot2::element_text(margin = margin(t = 2.5, r =0, b = 0, l = 0)),
   axis.text.y = ggplot2::element_text(margin = margin(t = 0, r =2.5, b = 0, l = 0)),
 
-  axis.ticks.length.x =  rid::unit(0.25,"cm"),
+  axis.ticks.length.x = grid::unit(0.25,"cm"),
   axis.ticks.length.y = grid::unit(0.25,"cm"),
   axis.ticks = ggplot2::element_line(color = "#333333", linewidth= .5),           # Set color and width of axis ticks
 
